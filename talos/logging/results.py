@@ -49,7 +49,9 @@ def run_round_results(self, out):
         else:
             best_epoch = np.argpartition(t_t, 0)[0]
 
-        if self.last_epoch_value:
+        if self.select_epoch_value:
+            value_to_report = self.select_epoch_value(self, out.history, key, out, best_epoch)
+        elif self.last_epoch_value:
             value_to_report = out.history[key][-1]
         else:
             value_to_report = np.array(out.history[key])[best_epoch]

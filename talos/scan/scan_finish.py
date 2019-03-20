@@ -1,6 +1,6 @@
 def scan_finish(self):
 
-    attrs_final = ['data', 'x', 'y', 'learning_entropy', 'round_times',
+    attrs_final = ['data', 'x', 'y', 'learning_entropy', 'round_times', 'my_log',
                    'params', 'saved_models', 'saved_weights', 'round_history']
 
     attrs_to_keep = attrs_final + ['random_method', 'grid_downsample',

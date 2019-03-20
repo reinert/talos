@@ -133,6 +133,7 @@ class Scan:
                  minimize_loss=False,
                  seed=None,
                  last_epoch_value=False,
+                 select_epoch_value=None,
                  clear_session=True,
                  disable_progress_bar=False,
                  print_params=False,
@@ -171,7 +172,9 @@ class Scan:
         self.clear_session = clear_session
         self.disable_progress_bar = disable_progress_bar
         self.last_epoch_value = last_epoch_value
+        self.select_epoch_value = select_epoch_value
         self.print_params = print_params
+        self.my_log = []
         # input parameters section ends
 
         self._null = self.runtime()
